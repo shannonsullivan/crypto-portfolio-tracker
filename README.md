@@ -1,24 +1,12 @@
 # Crypto Portfolio Tracker
 
 
-Crypto assets are digital tokens secured through a decentralized computer network. Owning several crypto 
-assets can be difficult to track and view overall value and performance.
+This was a collaborative project built with Java, React, and uses AWS.
 
-The crypto portfolio tracking service provides a custom view of the client's portfolio to meet their needs. 
-It is designed to connect with a 3rd party cryptocurrency data aggregator, displaying realtime data converted 
-to USD for accurate asset value. 
+Bcrypt was used for handling password hashing and JWT for authentication. Dagger was implemented for dependency injection and JUnit and Mockito for unit testing. 
 
-This will keep track of all assets in a single location with historical data of transactions to view growth 
-and regression.
+AWS DynamoDB was used for data management, Lambda for serverless management, API Gateway for RESTful API endpoints, and S3 for storage.
 
-We use API Gateway and Lambda to create seven endpoints (RegisterActivity, LoginActivity, VerifyActivity, 
-CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity) that will 
-handle the creation, update, and retrieval of portfolio to satisfy our requirements.
+Reusable components were implemented for better management and hooks to manage state. React router handles private and public routes for login and JWT for authentication and session storage.
 
-We store the user profile, portfolio, and transaction history in DynamoBD tables where we also designed
-a GSI schema and attribute projection that optimizes queries for the transactions.
-
-Crypto Portfolio Tracker also provides a web interface for users to manage their portfolio. After a user 
-registers and creates a portfolio, the main portfolio page provides a list view of assets and displays a 
-chart with asset information, portfolio percentages and total value. The user is also able to update their 
-portfolio and view transaction history.
+Chart.js was used to build a doughnut chart with custom labels for data visualization and Axiox for HTTP client requests to API endpoints.
