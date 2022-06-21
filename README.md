@@ -1,24 +1,27 @@
 # Crypto Portfolio Tracker
 
 
-Crypto assets are digital tokens secured through a decentralized computer network. Owning several crypto 
-assets can be difficult to track and view overall value and performance.
+## Backend Tech Stack 
 
-The crypto portfolio tracking service provides a custom view of the client's portfolio to meet their needs. 
-It is designed to connect with a 3rd party cryptocurrency data aggregator, displaying realtime data converted 
-to USD for accurate asset value. 
+* Bcrypt for handling password hashing
+* JSON Web Token for authentication
+* Dagger for Dependency-Injection 
+* Junit and Mockito for testing
+* AWS DynamoDB using a global secondary index for transaction history and data management
+* AWS S3 for storing and retrieving data
+* AWS Lambda to run code without managing a server
+* AWS API Gateway for RESTful API endpoints
 
-This will keep track of all assets in a single location with historical data of transactions to view growth 
-and regression.
+## Frontend Tech Stack 
 
-We use API Gateway and Lambda to create seven endpoints (RegisterActivity, LoginActivity, VerifyActivity, 
-CreatePortfolioActivity, GetPortfolioActivity, UpdatePortfolioActivity, GetTransactionActivity) that will 
-handle the creation, update, and retrieval of portfolio to satisfy our requirements.
+* React 
+  * Used reusable components for quicker development and better management of change implementation.
+  * Used hooks to manage state in functional components.
+  * Used react router to handle private and public routes for login and faster routing between components with less data to render.  
+* Chart.js to display doughnut chart to interact with component updates.
+  * There is better performance rendering large amounts of data using the Canvas element.
+* JSON Web Token used for authentication with session storage.
+* CSS for design aspect.
+* Axios for HTTP client requests to API endpoints.
 
-We store the user profile, portfolio, and transaction history in DynamoBD tables where we also designed
-a GSI schema and attribute projection that optimizes queries for the transactions.
 
-Crypto Portfolio Tracker also provides a web interface for users to manage their portfolio. After a user 
-registers and creates a portfolio, the main portfolio page provides a list view of assets and displays a 
-chart with asset information, portfolio percentages and total value. The user is also able to update their 
-portfolio and view transaction history.
