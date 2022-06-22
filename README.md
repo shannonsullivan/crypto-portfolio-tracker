@@ -3,6 +3,7 @@
 
 ## Backend Tech Stack 
 
+* Java
 * Bcrypt for handling password hashing
 * JSON Web Token for authentication
 * Dagger for Dependency-Injection 
